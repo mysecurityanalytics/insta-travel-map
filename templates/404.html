@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Instagram Travel Map</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.heat/0.2.0/leaflet-heat.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md">
+        <div class="container-fluid"><a class="navbar-brand" href="/">ITM</a><button class="navbar-toggler" data-toggle="collapse"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button></div>
+    </nav>
+    <div class="highlight-blue">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">Instagram Travel Map</h2>
+                <p class="text-center">You can see Instagram users travels and post geolocations in a map.</p>
+            </div>
+            <div class="buttons">
+                <form onSubmit="return process();">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div><input class="form-control" placeholder="#hashtag or username" id="search" type="text">
+                            <div class="input-group-append"><button class="btn btn-primary" type="submit" style="margin-top: -3px;">Search</button></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="alert alert-danger" role="alert">
+                {{ data.error }}
+            </div>
+        </div>
+        <script>
+            function process()
+            {   
+                let value = document.getElementById("search").value
+                if (value.includes("#")){
+                    var url = "/byHashtag/" + value.substr(1,value.length - 1);
+                }else{
+                    var url = "/byUsername/" + value;
+                }
+                location.href = url;
+                return false;
+            }
+        </script>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
