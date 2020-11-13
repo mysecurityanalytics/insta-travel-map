@@ -1,0 +1,132 @@
+.photo-card {
+  background-color: #2d3638;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.photo-background {
+  background-position: center;
+  background-size: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  min-height: 250px;
+}
+.photo-details {
+  padding: 2.1875em 5%;
+}
+@media screen and (min-width: 700px) {
+  .photo-card {
+    flex-direction: row;
+  }
+  .photo-background {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    min-height: none;
+    width: 50%;
+    height: 50%;
+  }
+  .photo-details {
+    width: 50%;
+  }
+}
+.photo-details h1,
+.photo-details h4 {
+  color: #fff;
+  font-weight: 500;
+  margin: 0;
+}
+.photo-details h1 {
+  font-size: 125%;
+  line-height: 1;
+  margin-bottom: 0.35em;
+}
+.photo-tags ul {
+  list-style-type: none;
+  margin: 0.35em 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 87.5%;
+  text-transform: lowercase;
+}
+.photo-tags li {
+  margin: 0 0.35em 0.35em 0;
+}
+.photo-tags a {
+  background-color: #191e20;
+  border-radius: 50px;
+  color: #fff;
+  display: block;
+  padding: 0.3125em 1.25em;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.photo-tags a:focus,
+.photo-tags a:hover {
+  color: #e37544;
+}
+.photo-details p {
+  color: #fff;
+}
+.highlight-blue {
+  color: #fff;
+  background-color: #1e6add;
+  padding: 50px 0;
+}
+.highlight-blue p {
+  color: #c4d5ef;
+  line-height: 1.5;
+}
+.highlight-blue h2 {
+  font-weight: 400;
+  margin-bottom: 25px;
+  line-height: 1.5;
+  padding-top: 0;
+  margin-top: 0;
+  color: inherit;
+}
+.highlight-blue .intro {
+  font-size: 16px;
+  max-width: 500px;
+  margin: 0 auto 25px;
+}
+.highlight-blue .buttons {
+  text-align: center;
+}
+.highlight-blue .buttons .btn {
+  padding: 16px 32px;
+  margin: 6px;
+  border: none;
+  background: 0 0;
+  box-shadow: none;
+  text-shadow: none;
+  opacity: 0.9;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.4px;
+  line-height: 1;
+}
+.highlight-blue .buttons .btn:hover {
+  opacity: 1;
+}
+.highlight-blue .buttons .btn:active {
+  transform: translateY(1px);
+}
+.highlight-blue .buttons .btn-primary,
+.highlight-blue .buttons .btn-primary:active {
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+  color: #ebeff1;
+  box-shadow: none;
+  text-shadow: none;
+  padding: 14px 24px;
+  background: 0 0;
+  transition: background-color 0.25s;
+}
