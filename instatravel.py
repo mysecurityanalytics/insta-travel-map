@@ -74,7 +74,7 @@ def get_hashtag_data(hashtag):
                 print(post_data)
                 data["posts"].append(post_data)
                 latlngs.append([post.location.lat, post.location.lng, 1.0])
-            if len(data["posts"]) >= 7:
+            if len(data["posts"]) >= int(os.environ['TAG_MAX_POST']):
                 break
         data["latlngs"] = str(latlngs)
     except instaloader.exceptions.QueryReturnedNotFoundException:
