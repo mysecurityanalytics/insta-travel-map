@@ -16,5 +16,5 @@ Web çatısı olarak [Flask](https://flask.palletsprojects.com/en/1.1.x/) kullan
 ```sh
 docker build -t mysa/insta-travel-map .
 docker run -d -p 5000:5000 -e INSTA_USERNAME=kullanıcı_adınız -e TAG_MAX_POST=10 mysa/insta-travel-map
-docker docker exec -it <konteyner_id_veya_ismi> instaloader -l <instagram_kullanici_adi>
+docker exec -it <konteyner_id_veya_ismi> instaloader -l <instagram_kullanici_adi>
 ```

@@ -17,5 +17,5 @@ This project is created by [Çalgan Aygün](https://github.com/calganaygun). The
 ```sh
 docker build -t mysa/insta-travel-map .
 docker run -d -p 5000:5000 -e INSTA_USERNAME=your_username -e TAG_MAX_POST=10 mysa/insta-travel-map
-docker docker exec -it <container_id_or_name> instaloader -l <your_instagram_username>
+docker exec -it <container_id_or_name> instaloader -l <your_instagram_username>
 ```
